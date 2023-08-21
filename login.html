@@ -38,11 +38,13 @@
         button {
             background-color: #00acee;
             color: white;
-            padding: 14px 20px;
+            padding: 10px 20px;
             margin: 8px 0;
             border: none;
             cursor: pointer;
             width: 100%;
+            font-family: TitilliumWeb;
+            font-size: large;
         }
 
         button:hover {
@@ -59,7 +61,7 @@
             if (username === "admin" && password === "password") {
                 alert("Login successful.");
                 // Redirects if successful
-                window.location.href = "homepage.html";
+                window.location.href = "index.html";
                 return false;
             } 
             else {
@@ -83,6 +85,9 @@
             <label for="password"><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="password" required>
             <button type="submit">Login</button>
+        </form>
+        <form id="Cancel" action="index.html" method="post">
+            <button type="submit">Cancel</button>
         </form>
     </div>
 </body>
