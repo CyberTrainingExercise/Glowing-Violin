@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <title>Login Page</title>
+    <style>
+        /* CSS code for the login form */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 300px;
+            padding: 16px;
+            background-color: #f2f2f2;
+            margin: 0 auto;
+        }
+
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #33df38;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            opacity: 0.75;
+        }
+    </style>
+
+    <script>
+        function validateForm() {
+            var username = document.querySelector('input[name="username"]').value;
+            var password = document.querySelector('input[name="password"]').value;
+
+            // Check username and password (admin/password)
+            if (username === "admin" && password === "password") {
+                alert("Login successful.");
+                // Redirects if successful
+                window.location.href = "homepage.html";
+                return false;
+            } 
+            else {
+                alert("Invalid username or password");
+                return false;
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <form id="loginForm" onsubmit="return validateForm()" method="post">
+            <label for="username"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="username" required>
+            <label for="password"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+
+</html>

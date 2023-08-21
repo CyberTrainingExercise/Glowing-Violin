@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title>Login Page</title>
+</head>
+
+<body>
+    <h1>Login</h1>
+    <form id="loginForm" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <input type="submit" value="Login">
+    </form>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Check if the username and password are correct
+            if (username === "admin" && password === "password") {
+                alert("Login successful");
+                // Redirects
+                window.location.href = "tests.html";
+                return false;
+            } else {
+                alert("Invalid username or password");
+            }
+        });
+    </script>
+</body>
+
+</html>

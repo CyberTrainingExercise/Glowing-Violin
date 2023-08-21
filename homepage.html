@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Social Media</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #00acee;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .post {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+        .post p {
+            margin: 0;
+        }
+        .post .username {
+            color: #00acee;
+            font-weight: bold;
+        }
+        .post .timestamp {
+            color: #999;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Social Media</h1>
+    </header>
+    <div class="post" id="post1">
+        <p class="username">JohnDoe</p>
+        <p>This is my first post! #HelloWorld</p>
+        <p class="timestamp">2 hours ago</p>
+        <div class="comments" id="comments1">
+            <!-- Comments will be dynamically added here using JavaScript -->
+        </div>
+    </div>
+    <div class="post" id="post2">
+        <!-- ... (post content) ... -->
+        <div class="comments" id="comments2">
+            <!-- ... (comments) ... -->
+        </div>
+    </div>
+    <!-- More posts can be added here -->
+
+    <script>
+        // Simulated comments data
+        const commentsData = {
+            post1: [
+                { username: 'JaneSmith', text: 'Great post, John! 👍', timestamp: '1 hour ago' },
+                // Add more comments here
+            ],
+            post2: [
+                // Comments for post2
+            ]
+            // Add more posts and comments here
+        };
+
+        // Function to generate comment HTML
+        function generateComment(comment) {
+            return `
+                <div class="comment">
+                    <p class="username">${comment.username}</p>
+                    <p>${comment.text}</p>
+                    <p class="timestamp">${comment.timestamp}</p>
+                </div>
+            `;
+        }
+
+        // Function to populate comments
+        function populateComments(postId) {
+            const commentsContainer = document.getElementById(`comments${postId}`);
+            const comments = commentsData[`post${postId}`];
+
+            if (comments) {
+                comments.forEach(comment => {
+                    commentsContainer.innerHTML += generateComment(comment);
+                });
+            }
+        }
+
+        // Call populateComments for each post
+        populateComments(1);
+        populateComments(2);
+        // Call populateComments for more posts if needed
+    </script>
+</body>
+</html>
