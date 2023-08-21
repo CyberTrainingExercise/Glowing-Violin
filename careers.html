@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Y (formerly Chirper)</title>
+    <style>
+        @font-face { font-family: TitilliumWeb; src: url('fonts/TitilliumWeb-Regular.ttf'); } 
+        h1 {
+            font-family: TitilliumWeb
+        }
+        body {
+            font-family: TitilliumWeb;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #00acee;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .post {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+        .post p {
+            margin: 0;
+        }
+        .post .username {
+            color: #00acee;
+            font-weight: bold;
+        }
+        .post .timestamp {
+            color: #999;
+            font-size: 12px;
+        }
+        button {
+            background-color: #f5f5f5;
+            color: black;
+            padding: 10px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            font-family: TitilliumWeb;
+            font-size: large;
+        }
+        button:hover {
+            opacity: 0.75;
+        }
+        footer {
+            font-family: TitilliumWeb;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/y_logo_small_clear.png", width="200", height="200">
+        <div style="float: right;">
+            <form id="login" action="login.html" method="post">
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        <h1>Welcome to V (formerly Chirper)</h1>
+    </header>
+    <br>
+    <div style="text-align: center;">
+        <h2>Careers</h2>
+        <p>We're hiring! Come make a difference.</p>
+    </div>
+    <div class="post">
+        <div style="display: inline-table; text-align: center;">
+            <img src="images/careers_ux.png", width="200", height="200", style="border-radius: 50%;">
+            <p class="username"></p>
+        </div>
+        <h3>User Experience Designer</h3>
+        <p>V is seeking a passionate User Experience Designer to shape the digital interactions of our platform. Collaborating with cross-functional teams, you will create intuitive, user-centric designs that enhance engagement and satisfaction. Your expertise in user research, wireframing, and prototyping will be pivotal in crafting seamless and visually captivating user journeys within the V ecosystem.</p>
+    </div>
+    <div class="post">
+        <div style="display: inline-table; text-align: center;">
+            <img src="images/careers_data.png", width="200", height="200", style="border-radius: 50%;">
+            <p class="username"></p>
+        </div>
+        <h3>Senior Data Scientist</h3>
+        <p>V is on the lookout for a skilled Data Scientist to harness the power of data and insights to drive informed decision-making. As part of our team, you will analyze user behavior, trends, and preferences to optimize user experiences, content recommendations, and platform performance. Your analytical prowess will play a pivotal role in shaping the evolution of V's digital ecosystem.</p>
+    </div>
+    <div class="post">
+        <div style="display: inline-table; text-align: center;">
+            <img src="images/careers_arvr.png", width="200", height="200", style="border-radius: 50%;">
+            <p class="username"></p>
+        </div>
+        <h3>Software Engineer - AR/VR</h3>
+        <p>Are you a visionary Software Engineer with expertise in Augmented Reality (AR) and Virtual Reality (VR)? V is hiring engineers who can innovate and push the boundaries of digital interaction. Collaborate with a dynamic team to develop immersive AR and VR experiences, enabling users to explore the V ecosystem in unprecedented ways.</p>
+    </div>
+    <div class="post">
+        <div style="display: inline-table; text-align: center;">
+            <img src="images/careers_hacker.png", width="200", height="200", style="border-radius: 50%;">
+            <p class="username"></p>
+        </div>
+        <h3>Cybersecurity Engineer</h3>
+        <p>V is seeking a dedicated Cybersecurity Engineer to safeguard the integrity and privacy of our users. In this role, you will design and implement robust security measures, conduct vulnerability assessments, and respond to potential threats in real-time. Join our mission to create a safe and secure online environment, ensuring users can engage within the V ecosystem with confidence.</p>
+    </div>
+    <div class="post">
+        <div style="display: inline-table; text-align: center;">
+            <img src="images/careers_sre.png", width="200", height="200", style="border-radius: 50%;">
+            <p class="username"></p>
+        </div>
+        <h3>Site Reliability Engineer</h3>
+        <p>V is hiring an experienced Site Reliability Engineer (SRE) to maintain the smooth operation of our digital ecosystem. Collaborate with teams to optimize infrastructure, automate processes, and respond to incidents. Your role ensures a seamless user experience as they navigate our interconnected platform. Join us in shaping the reliability and performance of V.</p>
+    </div>
+</body>
+<footer>
+    <div style="text-align: center;">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="careers.html">Careers</a>
+    </div>
+    <p style="text-align: center;">© 2023 V Corp.</p>
+</footer>
+</html>
