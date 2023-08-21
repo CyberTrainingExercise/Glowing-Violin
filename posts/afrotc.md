@@ -1,3 +1,3 @@
-AFROTC attendance down 98%. Polling during July of 2023 shows that 98% of AFROTC Cadets are not actively participating in AFROTC, a step decline in just the last 3 months. Senior Air Force officals have refused to comment on this massive drop in numbers.
+AFROTC attendance down 98%. Polling during July of 2023 shows that 98% of AFROTC Cadets are not actively participating in AFROTC, a steep decline in just the last 3 months. Senior Air Force officals have refused to comment on this massive drop in numbers.
 
 This is a worrying decline in numbers for the US Air Force, because without a strong stream of new recruits Officers, they will soon be in disarray.
