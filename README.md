@@ -2,7 +2,7 @@
 
 Welcome to Operation Glowing Violin, a Cyber Training Exercise (CTX) designed for i5 cadets.
 
-This CTX was designed to test cadets for leadership competencies in a high intensity simulation. This simulation will be carried out in both the land domain and in the cyber domain.
+Takedown a state actor by infiltrating their social media site.
 
 ### Objectives
 
@@ -46,7 +46,10 @@ TODO
 
 Similar to [Operation Glowing Symphony](https://cyberlaw.ccdcoe.org/wiki/Operation_Glowing_Symphony_(2016)), but on a much smaller and more tame scale.
 
-A foreign military force has been utilizing the website Z (formerly Chirper) to promote state propoganda via their state news channels. Intel believes they hold valuable private information on their account. Your mission is to obtain their login credentials and obtain this valuable private information. Intel reports that XSS and CSRF attacks are likely to be the best avenue into the site.
+A foreign military force has been utilizing the website Y (formerly Chirper) to promote state propoganda via their state news channels. Intel believes they hold valuable private information in their direct messages. Your mission is to obtain their login credentials and obtain this valuable private information. Due to recent rebranding, it is believe that XSS and CSRF attacks were reintroduced into the Y codebase.
+
+State propoganda's channel on Y (formerly Chirper).
+![image](images/demo.png)
 
 ### Difficulty Dials
 
