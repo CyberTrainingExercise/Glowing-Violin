@@ -46,9 +46,9 @@ TODO
 
 Similar to [Operation Glowing Symphony](https://cyberlaw.ccdcoe.org/wiki/Operation_Glowing_Symphony_(2016)), but on a much smaller and more tame scale.
 
-A foreign military force has been utilizing the website V (formerly Chirper) to promote state propoganda via their state news channels. Intel believes they hold valuable private information in their direct messages. Your mission is to obtain their login credentials and obtain this valuable private information. Due to recent rebranding, it is believe that XSS and CSRF attacks were reintroduced into the V codebase.
+A foreign military force has been utilizing the website V.com to promote propoganda via their state news channel. Intel believes they hold valuable private information in their direct messages. Your mission is to obtain their login credentials and gain access to this valuable private information. Due to recent rebranding and the associated refactoring, it is believe that XSS and CSRF attacks were reintroduced into the V codebase.
 
-State propoganda's channel on V (formerly Chirper).
+State propoganda's channel on V.
 ![image](images/demo.png)
 
 ### Difficulty Dials
