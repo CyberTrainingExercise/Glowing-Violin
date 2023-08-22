@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Y (formerly Chirper)</title>
+    <style>
+        @font-face { font-family: TitilliumWeb; src: url('fonts/TitilliumWeb-Regular.ttf'); } 
+        h1 {
+            font-family: TitilliumWeb
+        }
+        body {
+            font-family: TitilliumWeb;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #00acee;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .msg {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+        .msg p {
+            margin: 10px;
+        }
+        .msg.username {
+            color: #00acee;
+            font-weight: bold;
+        }
+        .msg.timestamp {
+            color: #999;
+            font-size: 12px;
+        }
+        button {
+            background-color: #f5f5f5;
+            color: black;
+            padding: 10px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            font-family: TitilliumWeb;
+            font-size: large;
+        }
+        button:hover {
+            opacity: 0.75;
+        }
+        footer {
+            font-family: TitilliumWeb;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div style="float: left;">
+            <img src="images/y_logo_small_clear.png", width="50", height="50">
+        </div>
+        <h1>Direct Messages</h1>
+    </header>
+    <div class="msg" id="msg1">
+        <div style="display: flex; text-align: center; align-items: center;">
+            <img src="images/dm_1.png", width="100", height="100", style="border-radius: 50%; margin-right: 10px;">
+            <h3 class="username">Jafe Proffer</h3>
+            <p>Update: On-site at City Hall for the Mayor's Press Conference regarding the budget proposal. Expect details on funding allocations and potential impact. I will submit article shortly.</p>
+        </div>
+    </div>
+    <div class="msg" id="msg1">
+        <div style="display: flex; text-align: center; align-items: center;">
+            <img src="images/dm_9.png", width="100", height="100", style="border-radius: 50%; margin-right: 10px;">
+            <h3 class="username">Vine-4</h3>
+            <p>Hey, quick status update. I'm currently interviewing experts on the escalating diplomatic tensions between two neighboring countries. Insight into the root causes and potential consequences.</p>
+        </div>
+    </div>
+    <div class="msg" id="msg1">
+        <div style="display: flex; text-align: center; align-items: center;">
+            <img src="images/dm_11.png", width="100", height="100", style="border-radius: 50%; margin-right: 10px;">
+            <h3 class="username">Pest Control</h3>
+            <p>I have found USB drive with PGP key in 007732's apartment. What should I do with it? I made a physical copy for safekeeping. Should I send it over-wire?</p>
+        </div>
+    </div>
+    <div class="msg" id="msg1">
+        <div style="display: flex; text-align: center; align-items: center;">
+            <img src="images/dm_17.png", width="100", height="100", style="border-radius: 50%; margin-right: 10px;">
+            <h3 class="username">Driver</h3>
+            <p>Your driver has arrived for pickup at 3rd and West St. Please proceed to the pickup point or cancel your ride.</p>
+        </div>
+    </div>
+    <div class="msg" id="msg1">
+        <div style="display: flex; text-align: center; align-items: center;">
+            <img src="images/dm_20.png", width="100", height="100", style="border-radius: 50%; margin-right: 10px;">
+            <h3 class="username">乔什</h3>
+            <p>我找到了钥匙。 我该把它送到哪里？</p>
+        </div>
+    </div>
+    <div class="msg" id="msg1">
+        <div style="display: flex; text-align: center; align-items: center;">
+            <img src="images/dm_8.png", width="100", height="100", style="border-radius: 50%; margin-right: 10px;">
+            <h3 class="username">The Frenchman</h3>
+            <p>I'd be happy to accept a debate on your show about relations with France. When can we schedule the prep meeting?</p>
+        </div>
+    </div>
+    <div class="msg" id="msg1">
+        <div style="display: flex; text-align: center; align-items: center;">
+            <img src="images/dm_5.png", width="100", height="100", style="border-radius: 50%; margin-right: 10px;">
+            <h3 class="username">Cabbage Music</h3>
+            <p>Hi, this is Lana from Cabbage Music. We recently put a copyright claim on several of your videos for failure to license the music used in them. However, we'd be happy to work with you in the future. Please let us know.</p>
+        </div>
+    </div>
+    <div class="msg" id="msg1">
+        <div style="display: flex; text-align: center; align-items: center;">
+            <img src="images/dm_10.png", width="100", height="100", style="border-radius: 50%; margin-right: 10px;">
+            <h3 class="username">General P.A.</h3>
+            <p>I would like to speak about our last interview. There is some information I may have disclosed incorrectly. My secretary will reach out, but please do not publish. Thank you.</p>
+        </div>
+    </div>
+    <div class="msg" id="msg1">
+        <div style="display: flex; text-align: center; align-items: center;">
+            <img src="images/dm_2.png", width="100", height="100", style="border-radius: 50%; margin-right: 10px;">
+            <h3 class="username">V Bot</h3>
+            <p>V Social Media Platform - Release Notes v4.2.0
+
+                New Features:
+                
+                Time-Travel Posts: Share retroactive posts for that perfect déjà vu moment.
+                Emotion-Based Filters: Let AI-driven filters match your mood in real-time.
+                Quantum Reaction Emojis: Interact with emojis that defy physics with every touch.
+                Enhancements:
+                
+                Universe Mode: Explore parallel timelines for a truly alternate feed experience.
+                Infinite Scroll 2.0: Scroll endlessly with unique posts every time.
+                Hologram Comments: Leave holographic comments that stand out in style.
+                Security Patches:
+                
+                Anti-Gravity Firewall: Repel unauthorized access attempts with virtual anti-gravity fields.
+                Neural Net Defender: Engage hackers in friendly chats to deter breaches.
+                Quantum Encryption Emoji: Send encrypted messages with emojis and quantum entanglement.
+                
+                Keep building on the ecosystem of the internet.
+                
+                —The V Team</p>
+        </div>
+    </div>
+    <div class="msg" id="msg1">
+        <div style="display: flex; text-align: center; align-items: center;">
+            <img src="images/dm_6.png", width="100", height="100", style="border-radius: 50%; margin-right: 10px;">
+            <h3 class="username">Gliev from H2 Systems</h3>
+            <p>Please publish this next to the ad: Introducing the pinnacle of aerial superiority in your forthcoming experience—the H2-25 Mega-Strike fighter jet. Meticulously crafted by our visionary engineers, this marvel of technological prowess redefines aviation. With its avant-garde aerodynamic contours, stealthy profile, and unmatched velocity, the H2-25 asserts its dominance. Seamlessly integrating state-of-the-art armaments and an AI-driven precision targeting system, you will dominate in heart-pounding dogfights. Through its adaptable modular architecture, the H2-25 ensures mission-specific customization, promising a captivating and ever-evolving experience. Embark on a journey to ascend the ranks of the skies as you commandeer the H2-25 Mega-Strike—a testament to unparalleled innovation and unwavering excellence.</p>
+        </div>
+    </div>
+    <!-- <div class="msg" id="msg1">
+        <div style="display: flex; text-align: center; align-items: center;">
+            <img src="images/dm_17.png", width="100", height="100", style="border-radius: 50%; margin-right: 10px;">
+            <h3 class="username"></h3>
+            <p></p>
+        </div>
+    </div> -->
+</body>
+<footer>
+    <div style="text-align: center;">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="careers.html">Careers</a>
+    </div>
+    <p style="text-align: center;">© 2023 V Corp.</p>
+</footer>
+</html>
