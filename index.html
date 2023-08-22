@@ -141,18 +141,44 @@
     </div>
     <!-- More posts can be added here -->
 
-    <script>
+    <script async="async">
         // Simulated comments data
-        const commentsData = {
-            post1: [
-                { username: 'Poe T. Ato', text: 'Great post, Bear! 📉📉📉😮', timestamp: '1 hour ago' },
-                // Add more comments here
-            ],
-            post2: [
-                // Comments for post2
-            ]
-            // Add more posts and comments here
-        };
+        // const commentsData = {
+        //     post1: [
+        //         { username: 'Poe T. Ato', text: 'Great post, Bear! 📉📉📉😮', timestamp: '1 hour ago' },
+        //         // Add more comments here
+        //     ],
+        //     post2: [
+        //         // Comments for post2
+        //     ]
+        //     // Add more posts and comments here
+        // };
+
+        let url = "http://localhost:8080"
+        fetch(url, {
+            method: "GET", // *GET, POST, PUT, DELETE, etc.
+            mode: "cors", // no-cors, *cors, same-origin
+            cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+            headers: {
+            "Content-Type": "application/json",
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+            },
+        }).then(function (response) {
+            // Successful fetch return as json
+            console.log("Resposne:", response);
+            return response.json();
+        }).then(function (data) {
+            // The API call was successful!
+            console.log('Success!', data);
+            // Call populateComments for each post
+            let totalPosts = 2;
+            for (let i = 0; i < totalPosts; i++) {
+                populateComments(i, data);
+            }
+        }).catch(function (err) {
+            // There was an error
+            console.warn('Something went wrong.', err);
+        });
 
         // Function to generate comment HTML
         function generateComment(comment) {
@@ -166,9 +192,9 @@
         }
 
         // Function to populate comments
-        function populateComments(postId) {
+        function populateComments(postId, data) {
             const commentsContainer = document.getElementById(`comments${postId}`);
-            const comments = commentsData[`post${postId}`];
+            const comments = data[`post${postId}`];
 
             if (comments) {
                 comments.forEach(comment => {
@@ -176,11 +202,6 @@
                 });
             }
         }
-
-        // Call populateComments for each post
-        populateComments(1);
-        populateComments(2);
-        // Call populateComments for more posts if needed
     </script>
 </body>
 <footer>
