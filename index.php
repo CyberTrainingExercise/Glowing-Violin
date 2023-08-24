@@ -1,3 +1,6 @@
+<?php
+    $flaskPoint = ''
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -86,6 +89,9 @@
         <div class="comments" id="comments1">
             <!-- Comments will be dynamically added here using JavaScript -->
         </div>
+        <div class="commentbox" id="commentbox1">
+            <input type="comment" placeholder="Add a comment" name="post1comment">
+        </div>
     </div>
     <div class="post" id="post2">
         <div style="display: inline-table; text-align: center;">
@@ -96,8 +102,11 @@
         <p>i5 Space has recently released their updated guidelines on membership. Requirements: college students in a US military training program. Yes, that's right. Space is apparently only for soldiers in college... [read more]</p>
         <p class="timestamp">10 hours ago</p>
         <p>---</p>
-        <div class="comments" id="comments1">
+        <div class="comments" id="comments2">
             <!-- Comments will be dynamically added here using JavaScript -->
+        </div>
+        <div class="commentbox" id="commentbox2">
+            <input type="comment" placeholder="Add a comment" name="post2comment">
         </div>
     </div>
     <div class="post" id="post3">
@@ -112,6 +121,9 @@
         <div class="comments" id="comments1">
             <!-- Comments will be dynamically added here using JavaScript -->
         </div>
+        <div class="commentbox" id="commentbox3">
+            <input type="comment" placeholder="Add a comment" name="post3comment">
+        </div>
     </div>
     <div class="post" id="post4">
         <div style="display: inline-table; text-align: center;">
@@ -124,6 +136,9 @@
         <p>---</p>
         <div class="comments" id="comments1">
             <!-- Comments will be dynamically added here using JavaScript -->
+        </div>
+        <div class="commentbox" id="commentbox4">
+            <input type="comment" placeholder="Add a comment" name="post4comment">
         </div>
     </div>
     <div class="post" id="post5">
@@ -138,8 +153,14 @@
         <div class="comments" id="comments1">
             <!-- Comments will be dynamically added here using JavaScript -->
         </div>
+        <div class="commentbox" id="commentbox5">
+            <input type="comment" placeholder="Add a comment" name="post5comment">
+        </div>
     </div>
     <!-- More posts can be added here -->
+    <script>
+        fetchComments(1);
+    </script>
 
     <script async="async">
         // Simulated comments data
@@ -185,12 +206,26 @@
             return `
                 <div class="comment">
                     <p class="username">${comment.username}</p>
-                    <p>${comment.text}</p>
-                    <p class="timestamp">${comment.timestamp}</p>
+                    <p>${comment.content}</p>
                 </div>
             `;
         }
+        function fetchComments(postId){
+            fetch('commentfetch.php?post_id='+postId)
+                .then(response => response.json())
+                .then(comments => {
+                    const commentsContainer = document.getElementById('comments'+postId);
+                    commentsContainer.innerHTML = '';
 
+                    comments.forEach(comment => {
+                        commentsContainer.innerHTML += generateComment(comment);
+                    });
+                })
+                .catch(error => {
+                    console.error("Error fetching comments:", error);
+                });
+        }
+        
         // Function to populate comments
         function populateComments(postId, data) {
             const commentsContainer = document.getElementById(`comments${postId}`);
