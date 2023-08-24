@@ -1,3 +1,14 @@
-pandas
-mysql-connector-python
-flask
+//Simulated comments data
+    // commentsData = {
+    //         post1: <?= $messages1?>
+    //             // Add more comments here
+    //         ,
+    //         post2: <?= $messages2?>
+    //         ,
+    //         post3: <?= $messages3?>
+    //         ,
+    //         post4: <?= $messages4?>
+    //         ,
+    //         post5: <?= $messages5?>
+            
+    //     };

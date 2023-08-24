@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 include "config.php";
 
@@ -19,12 +18,15 @@ if (isset($_POST['username']) && isset($_POST['password'])){
 	if(mysqli_num_rows($result) === 1){
 		$row = mysqli_fetch_assoc($result);
 		if($row['username'] === $uname && $row['password'] === $pass){
+			session_start();
 
-			$SESSION['username'] = $uname;
-			$SESSION['id'] = $row['user_id'];
-			$SESSION['loggedin'] = 'true';
+			$_SESSION['username'] = $uname;
+			$_SESSION['id'] = $row['user_id'];
+			$_SESSION['loggedin'] = true;
 
 			header("location: index.php");
+
+			//var_dump($_SESSION);
 		}
 		else{
 			header("location: logform.php?errorI");
