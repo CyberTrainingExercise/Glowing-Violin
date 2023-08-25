@@ -105,7 +105,7 @@
         <img src="images/y_logo_small_clear.png", width="100", height="100">
         <div style="float: right;">
             <form id="login" action="account.php" method="post">
-                <button type="submit" id="loginButton">Login</input>
+                <button type="submit" id="loginButton">Your Account</input>
             </form>
         </div>
         <h1>Welcome to V (formerly Chirper)</h1>

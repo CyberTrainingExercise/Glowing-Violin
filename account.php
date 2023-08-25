@@ -17,6 +17,8 @@
 
         return json_encode($comments);
 
+        
+
     }
 
     // $messages1 = fetchMessages('1');
